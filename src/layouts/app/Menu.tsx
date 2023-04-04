@@ -40,9 +40,21 @@ function Menu() {
                     <Image src='/img/bridge_dark.png' alt="Borrow" id="Vector" className="dark__mode" width={12} height={15}/>
                     </div>
                     <li className="btnM">
-                     Borrow
+                     Create / Close
                     </li>
                 
+            </Link>
+
+            <Link href="/eBTC/manage" className="menu-item">      
+
+                <div className="menu-icon">
+                <Image src='/img/transactions_dark.png' alt="manage" id="Vector" className="dark__mode" width={16} height={15}/>
+                </div>
+                <li className="btnM">
+                    Manage
+                </li>
+
+
             </Link>
 
 
@@ -63,17 +75,7 @@ function Menu() {
             <hr id="menuHR"></hr>
             <ul>
 
-            <Link href="/eBTC/feedback" className="menu-item">      
 
-                <div className="menu-icon">
-                    <Image src='/img/feedback_dark.png' alt="anetaFeedback" id="Vector" className="dark__mode" width={16} height={15}/>
-                </div>
-                <li className="btnM">
-                    Feedback
-                </li>
-            
-
-            </Link>
 
             <a href="" target="_blank" className="menu-item">
                 <div className="menu-icon">

@@ -47,8 +47,9 @@
                 padding: 5px 0;
                 background: vars.$header-back;
                 transform: translateY(-50px);
-                z-index: -1;
+                z-index: -10;
                 opacity: 0;
+                pointer-events: none;
                 .blockchain_item{
                     display: flex;
                     align-items: center;
@@ -63,6 +64,7 @@
             }
             .blockchain_change.open{
                 opacity: 1;
+                pointer-events: all;
                 transition: all 0.25s ease-in-out;
                 transform: translateY(0);
                 z-index: 3;

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import Dashboard from "./dashboard";
-import About from "./feedback";
+import Manage from "./manage";
 import Borrow from "@/components/borrow/Borrow";
 
 function RouterPage() {
@@ -11,8 +11,8 @@ function RouterPage() {
         return (<Borrow />)
     }else if(router.pathname === "/eBTC/dashboard"){
         return (<Dashboard/>)
-    }else if(router.pathname === "/eBTC/about"){
-        return (<About/>)
+    }else if(router.pathname === "/eBTC/manage"){
+        return (<Manage/>)
     }else return (<></>);
 
 
