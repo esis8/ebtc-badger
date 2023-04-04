@@ -1,0 +1,76 @@
+@use "./variables" as vars;
+
+.app__header{
+    width: 100%;
+    padding: 0 24px;
+    height: 85px;
+    background: vars.$header-back;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    @media (min-width: 2000px) and (orientation: landscape){
+        width: 2000px;
+      }
+    .logo{
+        width: 80px;
+        cursor: pointer;
+        img:hover{
+            filter: grayscale(50%) brightness(50%) contrast(90%);
+        }
+    }
+    .buttons{
+        display: flex;
+        align-items: center;
+        .btn{
+            @include vars.btn2();
+            margin-left: 20px;
+            width: 130px;
+            position: relative;
+            .btn__drop{
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                gap: 10px;
+                p{
+                    color: vars.$primary-color;
+                    cursor: pointer;
+                }
+            }
+            .blockchain_change{
+                width: 130px;
+                position: absolute;
+                top: 50px;
+                border: 1px solid vars.$primary-color;
+                border-radius: 10px;
+                padding: 5px 0;
+                background: vars.$header-back;
+                transform: translateY(-50px);
+                z-index: -1;
+                opacity: 0;
+                .blockchain_item{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding-left: 20px;
+                    height: 30px;
+                    &:hover{
+                        background: vars.$primary-color;
+                        color: vars.$primary-back;
+                    }
+                }
+            }
+            .blockchain_change.open{
+                opacity: 1;
+                transition: all 0.25s ease-in-out;
+                transform: translateY(0);
+                z-index: 3;
+            }
+        }
+        .btn.btn__connect{
+            @include vars.btn();
+            width: 130px;
+        }
+    }
+}

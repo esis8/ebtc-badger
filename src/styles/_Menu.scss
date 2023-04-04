@@ -1,0 +1,119 @@
+@use "./variables" as vars;
+
+.net {
+    width: 55px;
+    height: 17px;
+    border-radius: 5px;
+    background-color: #FAEDEC;
+    color: #84312D;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -9px;
+    left: 80px;
+}
+
+.sidebar {
+    position: relative;
+    border: 2px solid vars.$primary-color;
+    border-radius: 16.5px;
+    display: table;
+    text-align: left;
+    padding: 15px;
+    padding-top: 30px;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    margin: 18rem 5rem;
+    background-color: vars.$dark-color;
+    max-width: 100%;
+    align-items: center;
+    position: absolute;
+    .sidebar_content{
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .menu-item{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (min-width: 2000px) and (orientation: landscape){
+    .sidebar{
+        left: calc((100vw - 2000px)/2);
+    }
+}
+
+.btnM {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: vars.$font-weight-semibold;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#linkImg {
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+#menuHR {
+    width: 90%;
+    height: 2px;
+    background-color: vars.$primary-color;
+    border-radius: 2px;
+    text-align: left;
+    margin-top: -20px;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 25%;
+    margin-right: 30%;
+}
+
+#menuHR1 {
+    width: 92%;
+    margin-top: 65px;
+    text-align: left;
+
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.menu-item:hover {
+    background-color: vars.$primary-color;
+}
+
+.menu-item.active{
+    background-color: vars.$primary-color;
+
+}
+
+
+ul {
+    padding-inline-start: 0px;
+}
+
+.menu-icon {
+    height: 20px;
+}
+

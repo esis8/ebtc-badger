@@ -1,0 +1,67 @@
+@use "./variables" as vars;
+
+.main__header{
+
+    width: 100%;
+    padding: 0 24px;
+    height: 85px;
+    background: vars.$header-back;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    @media (min-width: 2000px) and (orientation: landscape){
+        width: 2000px;
+      }
+    .logo{
+        width: 80px;
+        cursor: pointer;
+        img:hover{
+            filter: grayscale(50%) brightness(50%) contrast(90%);
+        }
+    }
+    .head{
+        width: calc(100% - 80px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left ul{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: vars.$font-weight-semibold;
+            li{
+                position: relative;
+            }
+            li::before{
+                content: '';
+                position: absolute;
+                top: 26px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: vars.$primary-color;
+                transition: width 0.2s ease-in-out;
+                transform-origin: left;
+            }
+            li:hover::before{
+                width: 100%;
+                transform-origin: right;
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            .icons{
+                display: flex;
+                cursor: pointer;
+                gap: 20px;
+            }
+            button{
+                @include vars.btn2();
+            }
+        }
+    }
+}

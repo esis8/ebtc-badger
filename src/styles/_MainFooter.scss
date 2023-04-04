@@ -1,0 +1,53 @@
+@use "./variables" as vars;
+
+.main__footer{
+    width: 100%;
+    padding: 16px 24px;
+    height: 100px;
+    background: vars.$dark-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        cursor: pointer;
+        img:hover{
+            filter: grayscale(50%) brightness(50%) contrast(90%);
+        }
+    }
+    .rights{
+        p{
+            color: #FFFFFF99;
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+    .foot{
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+        .left ul{
+            display: flex;
+            gap: 20px;
+            height: 36px;
+            &:hover{
+                cursor: pointer;
+            }
+            li{
+                color: #FFFFFF99;
+                font-size: 14px;
+                &:hover{
+                    text-decoration:underline;
+                }
+            }
+        }
+        .right .icons img{
+            margin-right: 30px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+}

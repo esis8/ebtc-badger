@@ -1,0 +1,78 @@
+@use "./variables" as vars;
+
+@use "./MainHeader" as mainHeader;
+@use "./MainFooter" as mainFooter;
+
+.main__section {
+    position: relative;
+    @media (max-width: 1100px){
+        video{
+            display: none;
+        }
+    }
+
+    .main__title{
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        z-index: 1;
+        width: 40%;
+        max-width: 800px;
+        @media (max-width: 1500px){
+            top: 150px;
+        }
+        @media (max-width: 1100px){
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding-top: 150px;
+            min-height: calc(100vh - 100px);
+            text-align: center;
+            width: 100%;
+            
+        }
+        h1{
+            font-size: 68px;
+            color: vars.$primary-color;
+            font-weight: vars.$font-weight-semibold;
+            margin-bottom: 30px;
+            @media (max-width: 1500px){
+                font-size: 52px;
+            }
+        }
+        p{
+            color: vars.$light-color;
+            font-size: 28px;
+            @media (max-width: 1500px){
+                font-size: 24px;
+            }
+        }
+        button{
+            @include vars.btn();
+            margin-top: 30px;
+            @media (min-width: 1500px){
+                font-size: 28px;
+                width: 180px;
+                height: 60px;
+            }
+        }
+    }
+
+  }
+
+
+
+
+h1{
+    color: red;
+
+}
+
+h2{
+    color: blue;
+
+}
+
