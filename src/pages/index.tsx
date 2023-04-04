@@ -29,7 +29,7 @@ export default function Home() {
         
         <section className="main__section">
           <div className='main__title'>
-            <h1>Decentralized, On Chain Wrapped Bitcoin</h1>
+            <h1>Decentralized Bitcoin Powered by Ethereum Staking</h1>
             <p>Fully On-chain Bitcoin on the Ethereum network.</p>
             <Link href="/eBTC"><button>Go To App</button></Link>
           </div>
