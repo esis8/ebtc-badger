@@ -1,0 +1,71 @@
+@use "./variables" as vars;
+
+#DASHBOARD{
+     position: absolute;
+     margin-top: 80px;
+     margin-left: 400px;
+     @media (min-width: 1500px) {
+          margin-left: 550px;
+     }
+     @media (min-width: 2000px) {
+         margin-left: 700px;
+    }
+    .dashboard_group{
+        width: 800px;
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        .dashboard_item{
+            background-color: vars.$primary-back;
+            border-radius: 20px;
+            width: 33%;
+            text-align: center; 
+            border: 2px solid vars.$primary-color;
+            padding: 20px 10px;
+            h2{
+                font-size: 16px;
+                font-weight: vars.$font-weight-bold;
+                margin-bottom: 10px;
+            }
+            .item_usd{
+                font-size: 14px;
+                color: #575757;
+            }
+            .item_overCo{
+                font-size: 20px;
+            }
+
+        }
+    }
+    .pool_group{
+        margin-top: 40px;
+        width: 800px;
+        display: flex;
+        background-color: vars.$primary-back;
+        border-radius: 20px;
+        text-align: center; 
+        border: 2px solid vars.$primary-color;
+        padding: 20px 10px;
+        thead{
+            tr{
+                .td_Title{
+                    width: 200px;
+                    font-size: 18px;
+                    padding-bottom: 10px;
+                    font-weight: vars.$font-weight-bold;
+                }
+            }
+
+        }
+        .underline{
+            border-top: 1px #575757 solid;
+        }
+        .td_body{
+            padding: 15px 0;
+        }
+
+
+    }
+
+
+}
