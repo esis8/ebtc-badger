@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Image from 'next/image';
 import Create from './Create';
 import Close from './Close';
 

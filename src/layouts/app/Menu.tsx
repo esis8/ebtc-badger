@@ -34,7 +34,19 @@ function Menu() {
             </div>
             <div className="sidebar_content">
                 <ul className="menuList">
-            <Link href='/eBTC' className="menu-item">
+
+            <Link href="/eBTC" className="menu-item">
+            
+                <div className="menu-icon">
+                <Image src='/img/dashboard_dark.png' alt="Dashboard" id="Vector" className="dark__mode" width={16} height={15}/>
+                </div>
+                <li className="btnM">
+                Dashboard
+                </li>
+        
+            </Link>
+
+            <Link href='/eBTC/create-close' className="menu-item">
                 
                     <div className="menu-icon">
                     <Image src='/img/bridge_dark.png' alt="Borrow" id="Vector" className="dark__mode" width={12} height={15}/>
@@ -58,17 +70,7 @@ function Menu() {
             </Link>
 
 
-            <Link href="/eBTC/dashboard" className="menu-item">
-            
-                <div className="menu-icon">
 
-                <Image src='/img/dashboard_dark.png' alt="Dashboard" id="Vector" className="dark__mode" width={16} height={15}/>
-                </div>
-                <li className="btnM">
-                    Dashboard
-                </li>
-            
-            </Link>
 
             </ul>
                 <br/>

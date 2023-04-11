@@ -1,15 +1,18 @@
+import Borrow from "@/components/borrow/Borrow";
 import AppFooter from "@/layouts/app/AppFooter";
 import AppHeader from "@/layouts/app/AppHeader";
 import Menu from "@/layouts/app/Menu";
 
-function Dashboard() {
+function CreateClose() {
     return (
       <div>
-        <h2>Dashboard</h2>
-        <p>Welcome to the dashboard</p>
+        <AppHeader/>
+        <Menu />
+        <Borrow />
+        <AppFooter />
       </div>
     );
   }
 
   
-  export default Dashboard;
+  export default CreateClose;
