@@ -1,0 +1,30 @@
+src/components/borrow/Close.tsx(32,22): error TS2345: Argument of type 'SetDepositEbtcAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositEbtcAction'.
+src/components/borrow/Close.tsx(33,22): error TS2345: Argument of type 'SetDepositstEthAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositstEthAction'.
+src/components/borrow/Close.tsx(37,22): error TS2345: Argument of type 'SetDepositEbtcAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositEbtcAction'.
+src/components/borrow/Close.tsx(43,18): error TS2345: Argument of type 'SetDepositEbtcAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositEbtcAction'.
+src/components/borrow/Close.tsx(45,18): error TS2345: Argument of type 'SetDepositstEthAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositstEthAction'.
+src/components/borrow/Close.tsx(57,22): error TS2345: Argument of type 'SetDepositEbtcAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositEbtcAction'.
+src/components/borrow/Close.tsx(58,22): error TS2345: Argument of type 'SetDepositstEthAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositstEthAction'.
+src/components/borrow/Create.tsx(28,22): error TS2345: Argument of type 'SetDepositstEthAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositstEthAction'.
+src/components/borrow/Create.tsx(31,22): error TS2345: Argument of type 'SetDepositstEthAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositstEthAction'.
+src/components/borrow/Create.tsx(39,22): error TS2345: Argument of type 'SetDepositEbtcAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositEbtcAction'.
+src/components/borrow/Create.tsx(42,22): error TS2345: Argument of type 'SetDepositEbtcAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositEbtcAction'.
+src/components/borrow/Create.tsx(48,18): error TS2345: Argument of type 'SetDepositEbtcAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositEbtcAction'.
+src/components/borrow/Create.tsx(60,18): error TS2345: Argument of type 'SetDepositEbtcAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositEbtcAction'.
+src/components/borrow/Create.tsx(61,18): error TS2345: Argument of type 'SetDepositstEthAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetDepositstEthAction'.
+src/layouts/app/AppHeader.tsx(19,14): error TS2345: Argument of type 'SetSelectedRedAction' is not assignable to parameter of type 'UnknownAction'.
+  Index signature for type 'string' is missing in type 'SetSelectedRedAction'.
