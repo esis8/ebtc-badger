@@ -1,29 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import React, {useEffect} from 'react';
+import { useRouter } from 'next/router';
 
 function Menu() {
-
-    useEffect(() => {
-        if(typeof window !== "undefined"){
-
-                let menuActive = document.querySelectorAll(".menu-item")
-
-        
-                for (const items of menuActive) {
-                    if (items.getAttribute("href") == window.location.pathname) {
-                        items.classList.add("active");
-                    }
-                
-                    items.addEventListener("click", function(this: HTMLElement) {
-                        for (const item of menuActive) {
-                            item.classList.remove("active");
-                        }
-                        this.classList.add("active");
-                    });
-                }
-        }
-      }, []);
+    const router = useRouter();
+    const menuItemClass = (path: string) =>
+        router.pathname === path ? 'menu-item active' : 'menu-item';
 
     return (
         <div className="sidebar" id="sidebar">
@@ -35,7 +17,7 @@ function Menu() {
             <div className="sidebar_content">
                 <ul className="menuList">
 
-            <Link href="/eBTC" className="menu-item">
+            <Link href="/eBTC" className={menuItemClass('/eBTC')}>
             
                 <div className="menu-icon">
                 <Image src='/img/dashboard_dark.png' alt="Dashboard" id="Vector" className="dark__mode" width={16} height={15}/>
@@ -46,7 +28,7 @@ function Menu() {
         
             </Link>
 
-            <Link href='/eBTC/create-close' className="menu-item">
+            <Link href='/eBTC/create-close' className={menuItemClass('/eBTC/create-close')}>
                 
                     <div className="menu-icon">
                     <Image src='/img/bridge_dark.png' alt="Borrow" id="Vector" className="dark__mode" width={12} height={15}/>
@@ -57,7 +39,7 @@ function Menu() {
                 
             </Link>
 
-            <Link href="/eBTC/manage" className="menu-item">      
+            <Link href="/eBTC/manage" className={menuItemClass('/eBTC/manage')}>
 
                 <div className="menu-icon">
                 <Image src='/img/transactions_dark.png' alt="manage" id="Vector" className="dark__mode" width={16} height={15}/>

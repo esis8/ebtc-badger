@@ -1,5 +1,3 @@
-import React, {useEffect, useState} from 'react';
-
 const ETH = 1700
 const BTC = 27500
 

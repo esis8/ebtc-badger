@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import { setDepositstEth, setDepositEbtc, setUsdBtc, setUsdStEth } from '@/redux/actions';
+import { useEffect, useState } from 'react';
+import type { ChangeEvent } from 'react';
+import { setDepositstEth, setDepositEbtc } from '@/redux/actions';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/types/types";
 
@@ -12,19 +13,17 @@ function Close() {
     const EBTC_BORROWED = 0.51245545
 
     const [spinMint, setSpinMint] = useState(false)
-    const [usdEthCoin, setUsdEthCoin] = useState("")
-    const [usdBtcCoin, setUsdBtcCoin] = useState("")
-    const [receiveStETH, setReceiveStETH] = useState("")
-    const [receiveUsdStETH, setReceiveUsdStETH] = useState("")
-    const [collateral, setCollateral] = useState("");
     const eBtcDeposit = useSelector((state: RootState)=> state.eBtcDeposit)
     const stEthDeposit = useSelector((state: RootState)=> state.stEthDeposit)
-    const usdBtc = useSelector((state: RootState)=> state.usdBtc)
-    const usdStEth = useSelector((state: RootState)=> state.usdStEth)
+
+    const usdEthCoin = (Math.round(((parseFloat(stEthDeposit) * .995 * ETH)) * 100000000) / 100000000).toFixed(2)
+    const usdBtcCoin = (Math.round(((parseFloat(eBtcDeposit) * .995 * BTC)) * 100000000) / 100000000).toFixed(2)
+    const receiveStETH = (Math.round((parseFloat(stEthDeposit) * .995) * 100000000) / 100000000).toString()
+    const receiveUsdStETH = (Math.round(((parseFloat(stEthDeposit) * .995 * ETH)) * 100000000) / 100000000).toFixed(2)
 
     const dispatch = useDispatch();
 
-    const handleChangeInputEBtc = (event:React.ChangeEvent<HTMLInputElement>) => {
+    const handleChangeInputEBtc = (event: ChangeEvent<HTMLInputElement>) => {
         
         if (event.target.value !== '' && (1000 * parseFloat(event.target.value))/1000 !== 0) {
             const eBTC = event.target.value
@@ -58,21 +57,6 @@ function Close() {
             dispatch(setDepositstEth(''));
     
         },[dispatch]);
-
-    useEffect(()=>{
-
-        setUsdEthCoin((Math.round(((parseFloat(stEthDeposit)*.995*ETH))*100000000)/100000000).toFixed(2).toString())
-
-        setUsdBtcCoin((Math.round(((parseFloat(eBtcDeposit)*.995*BTC))*100000000)/100000000).toFixed(2).toString())
-
-        setReceiveStETH((Math.round(((parseFloat(stEthDeposit)*.995))*100000000)/100000000).toString())
-
-        setReceiveUsdStETH((Math.round(((parseFloat(stEthDeposit)*.995*ETH))*100000000)/100000000).toFixed(2).toString())
-
-        setCollateral((Math.round((((parseFloat(stEthDeposit)*.995*ETH)/(parseFloat(eBtcDeposit)*.995*BTC)))*100000000)/100000000).toFixed(2).toString())
-
-    },[stEthDeposit, eBtcDeposit]);
-
 
     return (
         <div id="CLOSE">

@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import { useState } from 'react';
+import type { ChangeEvent } from 'react';
 
 function ManagePosition() {
 
@@ -23,7 +24,7 @@ function ManagePosition() {
         SetStEthColl(stETH.toString());
       }
 
-      const handleChangeInputStEthColl = (event:React.ChangeEvent<HTMLInputElement>) => {
+      const handleChangeInputStEthColl = (event: ChangeEvent<HTMLInputElement>) => {
         
         if (event.target.value !== '' && (1000 * parseFloat(event.target.value))/1000 !== 0) {
             const stETH = event.target.value
@@ -35,7 +36,7 @@ function ManagePosition() {
     };  
 
 
-    const handleChangeInputeBtcDebit = (event:React.ChangeEvent<HTMLInputElement>) => {
+    const handleChangeInputeBtcDebit = (event: ChangeEvent<HTMLInputElement>) => {
         
         if (event.target.value !== '' && (1000 * parseFloat(event.target.value))/1000 !== 0) {
             const eBtc = event.target.value
